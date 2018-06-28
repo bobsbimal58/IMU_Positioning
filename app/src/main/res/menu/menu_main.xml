@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.bimal.mag_positioning.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <menu>
+        <item
+            android:id="@+id/start_step"
+            android:title="start step"/>
+        <item
+            android:id="@+id/correct_step"
+            android:title="correct step"/>
+        <item
+            android:id="@+id/stop_step"
+            android:title="stop step"/>
+        <item
+            android:id="@+id/show_step"
+            android:title="show step"/>
+        <item
+            android:id="@+id/link_network"
+            android:title="connect"/>
+        <item
+            android:id="@+id/broken_link_network"
+            android:title="disconnect"/>
+    </menu>
+</menu>

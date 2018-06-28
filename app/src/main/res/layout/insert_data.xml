@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="20dip"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dip"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="X-Axis"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:text="Y-Axis"
+
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Z-Axis"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Average" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/magnetismx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/magnetismy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/magnetismz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/magnetismd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+    </TableLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <Button
+            android:id="@+id/deleteDatabase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="DELETE" />
+
+        <Button
+            android:id="@+id/btnRecord"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="@string/stop" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/showDiff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="DIFF" />
+
+        <Button
+            android:id="@+id/loadData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="LoadData" />
+
+        <Button
+            android:id="@+id/insertData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Insert Data" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/calcDiff"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:text="Finding Difference:" />
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Error" />
+
+        <TextView
+            android:id="@+id/localization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Final Value:"
+            android:textColorLink="@android:color/holo_green_dark" />
+
+        <Button
+            android:id="@+id/localaizeData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Localize" />
+
+        <Button
+            android:id="@+id/errorData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Error" />
+
+        <Button
+            android:id="@+id/measure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Measure" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/mapid"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Map-Id"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="X-Cord"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Y-Cord"
+            android:inputType="number" />
+
+    </TableRow>
+
+    <TextView
+        android:id="@+id/load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.03"
+        android:text="Loading SQL Data" />
+
+    <EditText
+        android:id="@+id/xCord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="X-Ref"
+        android:inputType="number|numberSigned|numberDecimal" />
+
+    <EditText
+        android:id="@+id/yCord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Y-Ref"
+        android:inputType="number|numberSigned|numberDecimal" />
+
+</LinearLayout>
